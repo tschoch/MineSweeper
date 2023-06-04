@@ -1,13 +1,15 @@
-name: My Test Single Project
+name: My Test Monorepo Project
 on:
   push:
-    branches:
+      branches:
       - main
+      paths:
+      - 'Test_minesweeper/**'
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  sonarcloud:
-    name: SonarCloud
+  sonarcloudScan1:
+    name: SonarCloudScan1
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
