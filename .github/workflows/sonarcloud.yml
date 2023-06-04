@@ -49,7 +49,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}   # Generate a token on Sonarcloud.io, add it to the secrets of this repo with the name SONAR_TOKEN (Settings > Secrets > Actions > add new repository secret)
         with:
-          projectBaseDir: MineSweeper/Test_minesweeper/
+          projectBaseDir: /MineSweeper/Test_minesweeper/
           args: 
             -Dsonar.projectKey=tschoch_MineSweeper
             -Dsonar.organization=tschoch
